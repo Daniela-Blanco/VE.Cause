@@ -1,0 +1,165 @@
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~
+$ cd Desktop/SEO/
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO
+$ git init mi_repositorio
+Initialized empty Git repository in C:/Users/Daniela/Desktop/SEO/mi_repositorio/.git/
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO
+$ dir mi_repositorio
+index.html
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO
+$ cd mi_repositorio
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (master)
+$ git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (master)
+$ git commit -m "Primer archivo del repositorio"
+[master (root-commit) f927fdd] Primer archivo del repositorio
+ 1 file changed, 110 insertions(+)
+ create mode 100644 index.html
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (master)
+$ git branch mi-rama
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (master)
+$ git branch
+* master
+  mi-rama
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (master)
+$ git checkout mi-rama
+Switched to branch 'mi-rama'
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (mi-rama)
+$ git branch -master
+error: unknown switch `s'
+usage: git branch [<options>] [-r | -a] [--merged | --no-merged]
+   or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track           set up tracking mode (see git-pull(1))
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display SHA-1s
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --create-reflog       create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --format <format>     format to use for the output
+
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (mi-rama)
+$ git checkout master
+Switched to branch 'master'
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (master)
+$ git branch
+* master
+  mi-rama
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (master)
+$ git branch -D
+fatal: branch name required
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (master)
+$ mi-rama
+bash: mi-rama: command not found
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (master)
+$ git branch -l
+* master
+  mi-rama
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (master)
+$ git branch nueva_rama
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (master)
+$ git checkout nueva_rama
+Switched to branch 'nueva_rama'
+M       index.html
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (nueva_rama)
+$ git branch -l
+  master
+  mi-rama
+* nueva_rama
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (nueva_rama)
+$ git status
+On branch nueva_rama
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (nueva_rama)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (nueva_rama)
+$ git add .
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (nueva_rama)
+$ git commit -m "Agregando texto al html"
+[nueva_rama 09b99d6] Agregando texto al html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (nueva_rama)
+$ git log --oneline
+09b99d6 (HEAD -> nueva_rama) Agregando texto al html
+f927fdd (mi-rama, master) Primer archivo del repositorio
+
+Daniela@DESKTOP-SU9SVU5 MINGW64 ~/Desktop/SEO/mi_repositorio (nueva_rama)
